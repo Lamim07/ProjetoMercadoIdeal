@@ -5,7 +5,8 @@
   "description": "Landing page de apresentação para o IDEAL Supermercados",
   "scripts": {
     "dev": "node server.mjs",
-    "check": "node --check script.js && node --check server.mjs && node --check build.mjs",
-    "build": "node build.mjs"
+    "preview": "node server.mjs --dist",
+    "check": "node --check script.js && node --check server.mjs && node --check build.mjs && node --check validate-build.mjs",
+    "build": "npm run check && node build.mjs"
   }
 }

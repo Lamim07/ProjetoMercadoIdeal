@@ -23,6 +23,10 @@ npm run build
 
 O build recria apenas a pasta gerada `dist/`. Para apresentar em outro computador, extraia `IDEAL-apresentacao.zip` e abra o `index.html`, mantendo as pastas de imagens ao lado dele. O pacote pode ser servido por qualquer hospedagem estática.
 
+## Vercel
+
+A configuração de deploy está em `vercel.json`: framework **Other**, build `npm run build`, saída `dist` e sem instalação de dependências. O build valida os caminhos e a capitalização de todos os recursos locais. Use `npm run preview` para servir a versão gerada, ou extraia `IDEAL-vercel.zip` para obter o pacote de código pronto para importação. Instruções completas em [DEPLOY-VERCEL.md](DEPLOY-VERCEL.md).
+
 ## Implementado
 
 - Hero com apresentação da marca e chamada para ofertas.

@@ -3,7 +3,8 @@ import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = path.dirname(fileURLToPath(import.meta.url));
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+const root = process.argv.includes("--dist") ? path.join(projectRoot, "dist") : projectRoot;
 const port = Number(process.env.PORT || 3000);
 const mimeTypes = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "application/javascript; charset=utf-8", ".svg": "image/svg+xml", ".jpg": "image/jpeg", ".webp": "image/webp", ".png": "image/png" };
 

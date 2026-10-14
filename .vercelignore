@@ -1,0 +1,8 @@
+.git/
+.npm-cache/
+node_modules/
+design-assets/
+dist/
+output/
+*.zip
+PESQUISA-E-DIRECAO.md
