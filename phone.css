@@ -1,0 +1,35 @@
+/* IPhone17ProMax — adapted from Cult UI's MIT-licensed component.
+   Source: https://www.cult-ui.com/docs/components/apple-iphone-17-pro
+   Static HTML/CSS adaptation: graphite finish, default Dynamic Island,
+   status bar and home indicator. Official site blocks framing: the screen
+   contains a local content preview with links to the original page and stores. */
+@layer components {
+  .club-phone-showcase{display:flex;flex-direction:column;align-items:center;gap:22px;min-width:0;padding:12px 16px}
+  .iphone-17-pro{position:relative;width:min(100%,330px);aspect-ratio:71.5/149.6;isolation:isolate;color:#0a0a0a}
+  .phone-frame{position:absolute;inset:0;border-radius:55px;padding:3px;background:linear-gradient(145deg,#454549 0%,#3d3d41 15%,#363839 30%,#3a3a3e 50%,#424246 70%,#3b3b3f 85%,#343438 100%);box-shadow:0 25px 50px -12px #00000040,0 12px 24px -8px #00000026}
+  .phone-frame::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(135deg,#ffffff26 0%,transparent 25%,transparent 75%,#0000001a 100%)}
+  .phone-bezel{position:relative;width:100%;height:100%;padding:3px;background:#0a0a0a;border-radius:52px;overflow:hidden}
+  .phone-screen{position:relative;height:100%;width:100%;background:white;border-radius:49px;overflow:hidden}
+  .phone-status{position:absolute;top:0;right:0;left:0;height:56px;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;padding:20px 23px 0;background:#fff;pointer-events:none}
+  .phone-time{font-size:14px;font-weight:700;line-height:1;letter-spacing:-.02em;margin:1px 0 0 5px}
+  .phone-status-icons{display:flex;align-items:center;gap:5px;margin-top:1px}
+  .phone-signal{display:flex;align-items:flex-end;gap:1px;height:11px}.phone-signal i{display:block;width:3px;border-radius:1px;background:#0a0a0a}.phone-signal i:nth-child(1){height:5px}.phone-signal i:nth-child(2){height:7px}.phone-signal i:nth-child(3){height:9px;opacity:.3}.phone-signal i:nth-child(4){height:11px;opacity:.3}
+  .phone-wifi{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+  .phone-battery{position:relative;display:block;width:24px;height:12px;border:1px solid #11111133;border-radius:4px;margin-right:2px}.phone-battery::before{content:"";position:absolute;inset:1.2px 2px 1px 1.2px;border-radius:2.5px;background:#0a0a0ae6}.phone-battery::after{content:"";position:absolute;right:-3px;top:3px;width:1.5px;height:5px;border-radius:0 1px 1px 0;background:#0006}
+  .phone-island{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:110px;height:32px;border-radius:16px;background:#000;z-index:3;pointer-events:none}
+  .phone-camera{position:absolute;right:12px;top:11px;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#2a3a5a 0%,#0f1520 60%,#000 100%);box-shadow:inset 0 0 2px #6496ff4d}
+  .phone-content{position:absolute;top:56px;left:0;right:0;bottom:21px;background:white;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#d8ddd3 white;color-scheme:light}.phone-content:focus-visible{outline:2px solid var(--green);outline-offset:-3px;border-radius:3px}
+  .club-page-preview{background:white;color:#565656;font-family:Arial,sans-serif;text-align:left;padding-bottom:16px;line-height:1.55}
+  .club-page-banner{width:100%;height:auto;background:#d5e79d}.club-page-body{padding:0 16px}.club-page-logo{width:67px;height:67px;object-fit:contain;margin:12px 0 14px}
+  .club-page-body h3{font-size:18px;line-height:1.35;font-weight:600;letter-spacing:0;text-transform:uppercase;text-wrap:wrap;color:#555;margin:0 0 8px}
+  .club-page-body p{font-size:13px;line-height:1.6;color:#666;letter-spacing:0;margin:0}.club-page-body .club-page-flow-title{font-size:12px;font-weight:700;margin-top:10px;margin-bottom:3px;text-transform:uppercase}
+  .club-page-downloads{margin-top:24px}.club-page-downloads p{font-size:11px;text-align:center;margin-bottom:10px;color:#555}.club-app-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.club-app-links a{display:flex;align-items:center;min-height:44px}.club-app-links img{width:118px;height:auto}.club-preview-caption{font-size:9px;color:#c6d5bf;line-height:1.5;margin-top:0}.club-phone-link{margin-top:-13px}
+  .phone-home{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:128px;height:4px;border-radius:99px;background:#000c;pointer-events:none}
+  .phone-rail{position:absolute;left:-3px;width:3px;border-radius:2px 0 0 2px;background:linear-gradient(180deg,#424246 0%,#3a3a3e 30%,#363839 50%,#3a3a3e 70%,#424246 100%);box-shadow:-1px 0 0 #ffffff29,-2px 3px 5px -1px #00000057,-4px 5px 12px -2px #0003,inset 1px 0 1px #ffffff1f;z-index:-1}.phone-action{top:20%;height:22px}.phone-volume-up{top:27%;height:40px}.phone-volume-down{top:36%;height:40px}.phone-power{left:auto;right:-3px;top:28%;height:65px;border-radius:0 2px 2px 0;box-shadow:1px 0 0 #ffffff26,2px 1px 3px -1px #00000040,3px 2px 6px #00000026,inset -1px 0 1px #ffffff1a}
+  .club-phone-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:11px;color:#d6e2cf;text-decoration:underline;text-underline-offset:4px}.club-phone-link .icon{height:15px;width:15px}.club-phone-link:hover{color:white}.club-phone-link:focus-visible{outline-color:var(--brand)}
+}
+@layer responsive {
+  @media(max-width:900px){.club-grid{grid-template-columns:1fr 1fr;gap:28px}.club-phone-showcase{padding-inline:7px}.iphone-17-pro{width:min(100%,310px)}}
+  @media(max-width:650px){.club-grid{grid-template-columns:1fr;gap:35px}.club-phone-showcase{padding:6px 8px}.iphone-17-pro{width:min(100%,320px)}}
+  @media(max-width:360px){.phone-status{padding-inline:17px}.phone-time{font-size:12px;margin-left:2px}.phone-status-icons{gap:3px}.phone-island{width:95px}.phone-battery{width:20px}}
+}
